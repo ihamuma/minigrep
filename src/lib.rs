@@ -41,7 +41,7 @@ fn parse_bool_arg(arg: &str) -> Result<bool, &'static str> {
 
 /// # Errors
 ///
-/// Will return `Err` if file at end of`file_path` does not exist or the
+/// Will return `Err` if file at end of `file_path` does not exist or the
 /// user does not have permission to read it.
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.file_path)?;
